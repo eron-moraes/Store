@@ -66,13 +66,16 @@ public class Main {
     }
 
     private static void registerProducts() {
-        System.out.println("Nome do Produto: ");
+        System.out.println("Descricaoo do Produto: ");
         String nome = input.next();
 
         System.out.println("Preco do Produto: ");
         Double preco = input.nextDouble();
+        
+        System.out.println("Tamanho do Produto: ");
+        String tamanho = input.next();
 
-        Product produto = new Product(nome, preco);
+        Product produto = new Product(nome, preco, tamanho);
         produtos.add(produto);
 
         System.out.println(produto.getNome() + " cadastrado com sucesso!");
