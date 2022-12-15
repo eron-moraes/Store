@@ -1,75 +1,42 @@
 package br.com.fourstore.sistema.data.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import br.com.fourstore.sistema.data.DataInterface;
 
 public class ClientData implements DataInterface {
 
+List<Object>historico = new ArrayList<Object>();
+	
 	@Override
-	public void registerProducts(Object object) {
-		// TODO Auto-generated method stub
-		
+	public boolean save(Object object) {
+		if (historico.add(object)) {
+		return true;	
+		}
+		return false;
 	}
 
 	@Override
-	public void listProduct(Object object) {
-		// TODO Auto-generated method stub
-		
+	public boolean delete(Object object) {
+		if (historico.remove(object)) {
+			return true;	
+		}
+		return false;
 	}
 
 	@Override
-	public void buyProducts(Object object) {
-		// TODO Auto-generated method stub
-		
+	public boolean edit(Object object, Integer index) {
+		historico.set(index, object);
+		return true;	
 	}
 
 	@Override
-	public void seeCart(Object object) {
+	public List<Object> list() {
 		// TODO Auto-generated method stub
-		
+		return historico;
 	}
-
-	@Override
-	public void pay(Object object) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void checkout(Object object) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void menu(Object object) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public List<Object> ListItems() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void payDebit(Object object) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void payCredi(Object object) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void payCash(Object object) {
-		// TODO Auto-generated method stub
-		
-	}
-
 }
+
+	
+

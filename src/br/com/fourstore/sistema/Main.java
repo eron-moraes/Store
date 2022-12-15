@@ -2,6 +2,7 @@ package br.com.fourstore.sistema;
 
 
 import br.com.fourstore.sistema.model.Product;
+import br.com.fourstore.sistema.service.StockService;
 import br.com.fourstore.sistemaUtils.Utils;
 
 
@@ -12,7 +13,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static Scanner input = new Scanner(System.in);
+	private static Scanner input = new Scanner(System.in);
     private static ArrayList<Product> produtos;
     private static Map<Product, Integer> carrinho;
 
@@ -66,21 +67,24 @@ public class Main {
     }
 
     private static void registerProducts() {
+    	
+    	
+    	System.out.println("Digite o SKU do produto");
+    	String sku = input.next();
+    	
         System.out.println("Descricaoo do Produto: ");
         String nome = input.next();
 
         System.out.println("Preco do Produto: ");
         Double preco = input.nextDouble();
         
-        System.out.println("Tamanho do Produto: ");
-        String tamanho = input.next();
 
-        Product produto = new Product(nome, preco, tamanho);
+        Product produto = new Product(sku, nome, preco);
         produtos.add(produto);
-
+         
         System.out.println(produto.getNome() + " cadastrado com sucesso!");
-        menu();
-    }
+        menu();       
+        }
 
     private static void listProducts() {
         if (produtos.size() > 0) {
@@ -195,7 +199,8 @@ public class Main {
         }
 
         System.out.println("***Dados do CLiente***");
-        System.out.println("Nome do Cliente: " + nomeClient + " CPF do Cliente: " + CPF);
+        System.out.println("Nome do Cliente: " + nomeClient + 
+        		" CPF do Cliente: " + CPF);
 
     }
 
