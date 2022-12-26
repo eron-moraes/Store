@@ -5,10 +5,10 @@ import java.util.Map;
 
 public enum TypeEnum {
 	
-	CALÇA("A"),
+	CALCA("A"),
 	CAMISA("B"),
 	BLUSA("C"),
-	CALÇADO("D");
+	CALCADO("D");
 
 	String typ;
 	

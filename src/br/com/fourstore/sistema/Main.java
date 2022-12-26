@@ -126,11 +126,14 @@ public class Main {
 
                     if (isPresent) {
                         System.out.println("Deseja adicionar outro produto ao carrinho? ");
-                        System.out.println("Digite 1 para sim ou 0 para finalizar a compra. \n ");
+                        System.out.println("Digite 1 para sim ou 0 para finalizar a compra ou 2 para ver o Carrinho. \n ");
                         int option = Integer.parseInt(input.next());
 
                         if (option == 1) {
                         	buyProducts();
+                        }
+                        if (option == 2) {
+                            seeCart();
                         } else {
                             pay();
                             checkout();
@@ -162,8 +165,10 @@ public class Main {
     private static void pay() {
 
 
-        System.out.println("CPF do cliente: ");
+        System.out.println("CPF do cliente (Apenas Digitos): ");
         String CPF = input.next();
+        
+        String CPFformatado = CPF.substring(0,3)+"."+CPF.substring(3,6)+"."+CPF.substring(6,9)+"-"+CPF.substring(9,11);
 
         System.out.println("Nome do cliente: ");
         String nomeClient = input.next();
@@ -200,7 +205,7 @@ public class Main {
 
         System.out.println("***Dados do CLiente***");
         System.out.println("Nome do Cliente: " + nomeClient + 
-        		" CPF do Cliente: " + CPF);
+        		" CPF do Cliente: " + CPFformatado);
 
     }
 

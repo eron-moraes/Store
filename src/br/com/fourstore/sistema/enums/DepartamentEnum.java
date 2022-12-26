@@ -6,8 +6,8 @@ import java.util.Map;
 public enum DepartamentEnum {
 	
 	VESTUARIO("100"),
-	CALÇADO("200"),
-	ACESSÓRIO("300"),
+	CALCADO("200"),
+	ACESSORIO("300"),
 	PERFUMARIA("400");
 	
 	String cod;
