@@ -205,7 +205,7 @@ public class Main {
 
         System.out.println("***Dados do CLiente***");
         System.out.println("Nome do Cliente: " + nomeClient + 
-        		" CPF do Cliente: " + CPFformatado);
+        		" CPF do Cliente: " + CPFformatado); //Show the CPF formated in the progran's final
 
     }
 

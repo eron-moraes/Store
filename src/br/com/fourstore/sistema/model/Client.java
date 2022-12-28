@@ -5,6 +5,7 @@ package br.com.fourstore.sistema.model;
 
 	    private String nomeClient;
 	    private String CPF;
+	    
 
 	    public Client (String nomeClient, String CPF) {
 	        this.nomeClient = nomeClient;

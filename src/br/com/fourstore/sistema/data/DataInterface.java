@@ -9,6 +9,7 @@ public boolean delete(Object object);
 public boolean edit(Object object, Integer index);
 public List<Object> list();
 
+
 	
 
 }
