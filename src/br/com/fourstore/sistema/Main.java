@@ -233,6 +233,7 @@ public class Main {
                 System.out.println(p);
                 System.out.println("Quantidade: " + qtd);
                 System.out.println("--------------------");
+                System.out.println("--------------------");
             }
             System.out.println("O valor da sua compra e: " + Utils.doubleToString(valorDaCompra));
             carrinho.clear();
